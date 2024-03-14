@@ -56,15 +56,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
-    <script src="{{asset('assets/js/jquery.js')}} "></script>
-    <script src="{{asset('assets/js/bootstrap.min.js')}} "></script>
-    <script src="{{asset('assets/js/fullpage.min.js')}} "></script>
-    <script src="{{asset('assets/js/scrolloverflow.js')}} "></script>
+    <script src="{{asset('assets/js/jquery.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('assets/js/fullpage.min.js')}}"></script>
+    <script src="{{asset('assets/js/scrolloverflow.js')}}"></script>
 
-    <script src="{{asset('assets/js/owl.carousel.min.js')}} "></script>
-    <script src="{{asset('assets/js/jquery.inview.min.js')}} "></script>
-    <script src="{{asset('assets/js/form.js')}} "></script>
-    <script src="{{asset('assets/js/custom.js')}} "></script>
+    <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.inview.min.js')}}"></script>
+    <script src="{{asset('assets/js/form.js')}}"></script>
+    <script src="{{asset('assets/js/custom.js')}}"></script>
 
 
   </body>

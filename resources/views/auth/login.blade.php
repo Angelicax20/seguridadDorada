@@ -7,6 +7,7 @@
         <x-validation-errors class="mb-4" /> --}}
 @extends('layouts.home')
 @section('content')
+@include('layouts.navar')
     @if (session('status'))
         <div class="mb-4 font-medium text-sm text-green-600">
             {{ session('status') }}
@@ -26,7 +27,7 @@
                             <div class="mb-md-5 mt-md-4 pb-5">
 
 
-                                <img src="{{ asset('storage/images/logo.svg') }}" alt="" width="130rem">
+                                <img src="{{ asset('assets/css/storage/logo.svg') }}" alt="" width="130rem">
                                 <p class="text-white-50 mb-3">Ingresa tu correo y tu contraseña</p>
 
                                 <div class="form-outline form-white mb-4">

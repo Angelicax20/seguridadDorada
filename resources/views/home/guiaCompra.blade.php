@@ -48,9 +48,9 @@
                         </button>
 
                         <audio id="audio_paso_1" controls hidden
-                            src="./audio/PASO 2.1 .mp3">
+                            src="{{asset('assets/css/storage/audio/PASO 2.1 .mp3')}}">
                             <source id="audioSource" type="audio/webm"
-                                src="./audio/PASO 2.1 .mp3">
+                                src="{{asset('assets/css/storage/audio/PASO 2.1 .mp3')}}">
                         </audio>
                     </div>
                     <a href="#slide02" class="btn btn-s btn-secondary animate btn-select">Siguiente </a>
@@ -75,9 +75,9 @@
                                 </button>
 
                                 <audio id="audio_paso_2" controls hidden
-                                    src="./audio/PASO 2.2 .mp3">
+                                    src="{{asset('assets/css/storage/audio/PASO 2.2 .mp3')}}">
                                     <source id="audioSource" type="audio/webm"
-                                        src="./audio/PASO 2.2 .mp3">
+                                        src="{{asset('assets/css/storage/audio/PASO 2.2 .mp3')}}">
                                 </audio>
                             </div>
                             <a href="#slide03" class="btn btn-s btn-secondary animate btn-select"
@@ -106,9 +106,9 @@
                                 </button>
 
                                 <audio id="audio_paso_3" controls hidden
-                                    src="./audio/PASO 2.3 .mp3">
+                                    src="{{asset('assets/css/storage/audio/PASO 2.3 .mp3')}}">
                                     <source id="audioSource" type="audio/webm"
-                                        src="./audio/PASO 2.3 .mp3">
+                                        src="{{asset('assets/css/storage/audio/PASO 2.3 .mp3')}}">
                                 </audio>
                             </div>
                             <a href="#slide04" class="btn btn-s btn-secondary animate btn-select"
@@ -137,9 +137,9 @@
                                 </button>
 
                                 <audio id="audio_paso_4" controls hidden
-                                    src="./audio/Recordatorio .mp3">
+                                    src="{{asset('assets/css/storage/audio/Recordatorio .mp3')}}">
                                     <source id="audioSource" type="audio/webm"
-                                        src="./audio/Recordatorio .mp3">
+                                        src="{{asset('assets/css/storage/audio/Recordatorio .mp3')}}">
                                 </audio>
                             </div>
                             <a href="#slide05" class="btn btn-s btn-secondary animate btn-select"
@@ -170,14 +170,14 @@
                                 </button>
 
                                 <audio id="audio_paso_5" controls hidden
-                                    src="./audio/GUIA .mp3">
+                                    src="{{asset('assets/css/storage/audio/GUIA .mp3')}}">
                                     <source id="audioSource" type="audio/webm"
-                                        src="./audio/GUIA .mp3">
+                                        src="{{asset('assets/css/storage/audio/GUIA .mp3')}}">
                                 </audio>
                             </div>
                             <a href="{{route('mercado.libre')}}" class="btn btn-s btn-secondary animate btn-select"
                                 data-tipo="Siguiente">Guia Mecardo Libre</a>
-                            <a href="./pdf/mercadoLibre.pdf" target="_blank" download="MercadoLibre-Guia.pdf">
+                            <a href="assets/css/storage/pdf/mercadoLibre.pdf" target="_blank" download="MercadoLibre-Guia.pdf">
                                 <button class="btn btn-primary">Descargar Guia Pdf</button>
                             </a>
                         </div>
@@ -189,6 +189,7 @@
 
     </div>
 
-<script src="{{asset('assets/js/pag2.js')}} "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="{{asset('assets/js/pag2.js')}}"></script>
 
 @endsection

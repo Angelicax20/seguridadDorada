@@ -74,9 +74,9 @@
                                 </button>
 
                                 <audio id="audio_paso_1" controls hidden
-                                    src="./audio/PASO 3.1 .mp3">
+                                    src="{{asset('assets/css/storage/audio/PASO 3.1 .mp3')}}">
                                     <source id="audioSource" type="audio/webm"
-                                        src="./audio/PASO 3.1 .mp3">
+                                        src="{{asset('assets/css/storage/audio/PASO 3.1 .mp3')}}">
                                 </audio>
                             </div>
                             <a href="#slide03" class="btn btn-s btn-secondary animate btn-select"
@@ -109,14 +109,14 @@
                                 </button>
 
                                 <audio id="audio_paso_2" controls hidden
-                                    src="./audio/PASO 3.2 .mp3">
+                                    src="{{asset('assets/css/storage/audio/PASO 3.2 .mp3')}}">
                                     <source id="audioSource" type="audio/webm"
-                                        src="./audio/PASO 3.2 .mp3">
+                                        src="{{asset('assets/css/storage/audio/PASO 3.2 .mp3')}}">
                                 </audio>
                             </div>
                             <a href="#slide04" class="btn btn-s btn-secondary animate btn-select"
                                 data-tipo="Siguiente">Siguiente</a> 
-                            <a href="./pdf/Descargar-Guia.pdf" target="_blank" download="GuiaCrearUsuario.pdf">
+                            <a href="assets/css/storage/pdf/Descargar-Guia.pdf" target="_blank" download="GuiaCrearUsuario.pdf">
                                 <button class="btn btn-primary">Descargar Guia Pdf</button>
                             </a>
                         </div>
@@ -142,9 +142,9 @@
                                 </button>
 
                                 <audio id="audio_paso_3" controls hidden
-                                    src="./audio/PASO 3.3 .mp3">
+                                    src="{{asset('assets/css/storage/audio/PASO 3.3 .mp3')}}">
                                     <source id="audioSource" type="audio/webm"
-                                        src="./audio/PASO 3.3 .mp3">
+                                        src="{{asset('assets/css/storage/audio/PASO 3.3 .mp3')}}">
                                 </audio>
                             </div>
                             <a href="#slide05" class="btn btn-s btn-secondary animate btn-select"
@@ -172,9 +172,9 @@
                                 </button>
 
                                 <audio id="audio_paso_4" controls hidden
-                                    src="./audio/PASO 3.4 .mp3">
+                                    src="{{asset('assets/css/storage/audio/PASO 3.4 .mp3')}}">
                                     <source id="audioSource" type="audio/webm"
-                                        src="./audio/PASO 3.4 .mp3">
+                                        src="{{asset('assets/css/storage/audio/PASO 3.4 .mp3')}}">
                                 </audio>
                             </div>
                             <a href="#slide06" class="btn btn-s btn-secondary animate btn-select"
@@ -202,9 +202,9 @@
                                 </button>
 
                                 <audio id="audio_paso_5" controls hidden
-                                    src="./audio/PASO 3.5 .mp3">
+                                    src="{{asset('assets/css/storage/audio/PASO 3.5 .mp3')}}">
                                     <source id="audioSource" type="audio/webm"
-                                        src="./audio/PASO 3.5 .mp3">
+                                        src="{{asset('assets/css/storage/audio/PASO 3.5 .mp3')}}">
                                 </audio>
                             </div>
                             <a href="#slide07" class="btn btn-s btn-secondary animate btn-select"
@@ -234,9 +234,9 @@
                                 </button>
 
                                 <audio id="audio_paso_6" controls hidden
-                                    src="./audio/PASO 3.6 .mp3">
+                                    src="{{asset('assets/css/storage/audio/PASO 3.6 .mp3')}}">
                                     <source id="audioSource" type="audio/webm"
-                                        src="./audio/PASO 3.6 .mp3">
+                                        src="{{asset('assets/css/storage/audio/PASO 3.6 .mp3')}}">
                                 </audio>
                             </div>
                             <a href="{{route('manual.mercado')}}" class="btn btn-s btn-secondary animate btn-select"
@@ -247,5 +247,8 @@
             </div>
         </div>
     </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="{{asset('assets/js/pag3.js')}}"></script>
 
 @endsection

@@ -1,5 +1,4 @@
 
-
 const playButton_1 = document.getElementById('play_paso_1');
 const audio_paso_1 = document.getElementById('audio_paso_1');
 const playButton_2 = document.getElementById('play_paso_2');
@@ -58,6 +57,7 @@ document.getElementById("video").addEventListener("ended", function() {
 
 playButton_1.addEventListener('click', () => {
     if (audio_paso_1.paused) {
+        console.log("hola");
         audio_paso_1.play();
         // Si deseas cambiar el ícono a pausa:
         playButton_1.querySelector('.fa-play').classList.add('fa-pause');

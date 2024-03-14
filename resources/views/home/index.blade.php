@@ -10,56 +10,9 @@
                 <span></span>
             </div>
         </div>
-
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="content d-flex mx-5"  >
-            <a class="navbar-brand" href="#"><img src="{{ asset('storage/images/logo.svg') }}" alt="" width="60rem"></a>
-            {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button> --}}
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    {{-- <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li> --}}
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li> --}}
-                </ul>
-            </div>
-
-            {{-- <div class="d-flex justify-content-end"> --}}
-                <ul class="navbar-nav mr-auto">
-                    @if (Auth::user() != null)
-
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">{{Auth::user()->name}}</a>
-                    </li>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <button class="mx-1 btn btn-light" type="submit">Salir</button>
-                      </form>
-                    @else
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ route('login') }}">Ingresar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Registro</a>
-                    </li>
-                    @endif
-                </ul>
-            {{-- </div> --}}
-        </div>
-
-    </nav>
-
+    @include('layouts.navar')
     <header id="header">
         <div class="container-fluid d-flex justify-content-center">
             <div class="navbar">
@@ -68,7 +21,7 @@
                         <!-- <button type="button" class="navbar-toggle"> <i class="fa fa-bars"></i> </button> -->
                         <div class="nav-box navbar-collapse">
                             <a href="#" id="logo" title="Elegance by TemplateMo">
-                                <img src="{{ asset('storage/images/logo.svg') }}" alt="" width="120rem">
+                                <img src="{{ asset('assets/css/storage/logo.svg') }}" alt="" width="120rem">
                             </a>
                         </div>
                     </nav>
@@ -149,8 +102,8 @@
                                     <i class="fa fa-play"></i>
                                 </button>
 
-                                <audio id="audio_paso_1" controls hidden src="./audio/PASO 1 .mp3">
-                                    <source id="audioSource" type="audio/webm" src="./audio/PASO 1 .mp3">
+                                <audio id="audio_paso_1" controls hidden src="{{asset('assets/css/storage/audio/PASO 1 .mp3')}}">
+                                    <source id="audioSource" type="audio/webm" src="{{asset('assets/css/storage/audio/PASO 1 .mp3')}}">
                                 </audio>
 
                             </div>
@@ -178,8 +131,8 @@
                                     <i class="fa fa-play play-2"></i>
                                 </button>
 
-                                <audio id="audio_paso_2" controls hidden src="./audio/PASO 2 .mp3">
-                                    <source id="audioSource" type="audio/webm" src="./audio/PASO 2 .mp3">
+                                <audio id="audio_paso_2" controls hidden src="{{asset('assets/css/storage/audio/PASO 2 .mp3')}}">
+                                    <source id="audioSource" type="audio/webm" src="{{asset('assets/css/storage/audio/PASO 2 .mp3')}}">
                                 </audio>
                             </div>
                             <a href="#slide05" class="btn btn-s btn-secondary animate btn-select"
@@ -206,8 +159,8 @@
                                     <i class="fa fa-play"></i>
                                 </button>
 
-                                <audio id="audio_paso_3" controls hidden src="./audio/PASO 3 .mp3">
-                                    <source id="audioSource" type="audio/webm" src="./audio/PASO 3 .mp3">
+                                <audio id="audio_paso_3" controls hidden src="{{asset('assets/css/storage/audio/PASO 3 .mp3')}}">
+                                    <source id="audioSource" type="audio/webm" src="{{asset('assets/css/storage/audio/PASO 3 .mp3')}}">
                                 </audio>
                             </div>
                             <a href="#slide06" class="btn btn-s btn-secondary animate btn-select"
@@ -235,8 +188,8 @@
                                     <i class="fa fa-play play"></i>
                                 </button>
 
-                                <audio id="audio_paso_4" controls hidden src="./audio/PASO 4 .mp3">
-                                    <source id="audioSource" type="audio/webm" src="./audio/PASO 4 .mp3">
+                                <audio id="audio_paso_4" controls hidden src="{{asset('assets/css/storage/audio/PASO 4 .mp3')}}">
+                                    <source id="audioSource" type="audio/webm" src="{{asset('assets/css/storage/audio/PASO 4 .mp3')}}">
                                 </audio>
                             </div>
                             <a href="#slide07" class="btn btn-s btn-secondary animate btn-select"
@@ -268,8 +221,8 @@
                                     <i class="fa fa-play play-5"></i>
                                 </button>
 
-                                <audio id="audio_paso_5" controls hidden src="./audio/PASO 5 .mp3">
-                                    <source id="audioSource" type="audio/webm" src="./audio/PASO 5 .mp3">
+                                <audio id="audio_paso_5" controls hidden src="{{asset('assets/css/storage/audio/PASO 5 .mp3')}}">
+                                    <source id="audioSource" type="audio/webm" src="{{asset('assets/css/storage/audio/PASO 5 .mp3')}}">
                                 </audio>
                             </div>
                             <a href="{{ route('guia.compra') }}" class="btn btn-s btn-secondary animate btn-select"
@@ -285,8 +238,8 @@
     </div>
 
     </div>
-
-    <script src="{{ asset('assets/js/pag1.js') }} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="{{ asset('./assets/js/pag1.js') }}"></script>
 
 
     <script>
@@ -300,7 +253,6 @@
                 $('.intro').addClass('d-none');
                 $('.ex_0').removeClass('d-none');
             });
-
-        })
+        })     
     </script>
 @endsection
