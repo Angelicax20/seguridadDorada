@@ -59,18 +59,23 @@
                                         <span class="welcome-first animate" data-animate="fadeInUp">Para comenzar el
                                             curso</span>
                                         <h1 class="animate" data-animate="fadeInUp">Selecione una opcion</h1>
-                                        <a href="#slide03" class="btn btn-p btn-primary animate btn-select"
-                                            data-tipo="guia">Guia</a>
-                                        @if (Auth::user() != null )
-                                        <a href="#slide01" class="btn btn-s btn-secondary animate btn-select"
-                                            data-tipo="simulador">Simulador</a>
-                                            
-                                        @else
-                                        <a href="{{route('login')}}" class="btn btn-s btn-secondary animate btn-select"
-                                            data-tipo="simulador">Simulador</a>
-                                            
-                                        @endif
-                                    
+                                        <div class="d-flex text-center justify-content-center">
+                                            <a href="#slide03" class="btn btn-p btn-primary animate btn-select"
+                                                data-tipo="guia">Guia</a>
+                                            @if (Auth::user() != null)
+                                                <form action="{{ route('shop.view') }}" method="get">
+                                                    <button type="submit"
+                                                        class="btn btn-s btn-secondary animate btn-select mx-3"
+                                                        data-tipo="simulador">Simulador</button>
+                                                </form>
+                                            @else
+                                                <a href="{{ route('login') }}"
+                                                    class="btn btn-s btn-secondary animate btn-select mx-3"
+                                                    data-tipo="simulador">Simulador</a>
+                                            @endif
+
+                                        </div>
+
                                     </div>
                                     <span
                                         class="welcome-first animated fadeInUp text-option-btn text-p font-weight-bold d-none guia">Necesitas
@@ -102,8 +107,10 @@
                                     <i class="fa fa-play"></i>
                                 </button>
 
-                                <audio id="audio_paso_1" controls hidden src="{{asset('assets/css/storage/audio/PASO 1 .mp3')}}">
-                                    <source id="audioSource" type="audio/webm" src="{{asset('assets/css/storage/audio/PASO 1 .mp3')}}">
+                                <audio id="audio_paso_1" controls hidden
+                                    src="{{ asset('assets/css/storage/audio/PASO 1 .mp3') }}">
+                                    <source id="audioSource" type="audio/webm"
+                                        src="{{ asset('assets/css/storage/audio/PASO 1 .mp3') }}">
                                 </audio>
 
                             </div>
@@ -131,8 +138,10 @@
                                     <i class="fa fa-play play-2"></i>
                                 </button>
 
-                                <audio id="audio_paso_2" controls hidden src="{{asset('assets/css/storage/audio/PASO 2 .mp3')}}">
-                                    <source id="audioSource" type="audio/webm" src="{{asset('assets/css/storage/audio/PASO 2 .mp3')}}">
+                                <audio id="audio_paso_2" controls hidden
+                                    src="{{ asset('assets/css/storage/audio/PASO 2 .mp3') }}">
+                                    <source id="audioSource" type="audio/webm"
+                                        src="{{ asset('assets/css/storage/audio/PASO 2 .mp3') }}">
                                 </audio>
                             </div>
                             <a href="#slide05" class="btn btn-s btn-secondary animate btn-select"
@@ -159,8 +168,10 @@
                                     <i class="fa fa-play"></i>
                                 </button>
 
-                                <audio id="audio_paso_3" controls hidden src="{{asset('assets/css/storage/audio/PASO 3 .mp3')}}">
-                                    <source id="audioSource" type="audio/webm" src="{{asset('assets/css/storage/audio/PASO 3 .mp3')}}">
+                                <audio id="audio_paso_3" controls hidden
+                                    src="{{ asset('assets/css/storage/audio/PASO 3 .mp3') }}">
+                                    <source id="audioSource" type="audio/webm"
+                                        src="{{ asset('assets/css/storage/audio/PASO 3 .mp3') }}">
                                 </audio>
                             </div>
                             <a href="#slide06" class="btn btn-s btn-secondary animate btn-select"
@@ -188,8 +199,10 @@
                                     <i class="fa fa-play play"></i>
                                 </button>
 
-                                <audio id="audio_paso_4" controls hidden src="{{asset('assets/css/storage/audio/PASO 4 .mp3')}}">
-                                    <source id="audioSource" type="audio/webm" src="{{asset('assets/css/storage/audio/PASO 4 .mp3')}}">
+                                <audio id="audio_paso_4" controls hidden
+                                    src="{{ asset('assets/css/storage/audio/PASO 4 .mp3') }}">
+                                    <source id="audioSource" type="audio/webm"
+                                        src="{{ asset('assets/css/storage/audio/PASO 4 .mp3') }}">
                                 </audio>
                             </div>
                             <a href="#slide07" class="btn btn-s btn-secondary animate btn-select"
@@ -221,8 +234,10 @@
                                     <i class="fa fa-play play-5"></i>
                                 </button>
 
-                                <audio id="audio_paso_5" controls hidden src="{{asset('assets/css/storage/audio/PASO 5 .mp3')}}">
-                                    <source id="audioSource" type="audio/webm" src="{{asset('assets/css/storage/audio/PASO 5 .mp3')}}">
+                                <audio id="audio_paso_5" controls hidden
+                                    src="{{ asset('assets/css/storage/audio/PASO 5 .mp3') }}">
+                                    <source id="audioSource" type="audio/webm"
+                                        src="{{ asset('assets/css/storage/audio/PASO 5 .mp3') }}">
                                 </audio>
                             </div>
                             <a href="{{ route('guia.compra') }}" class="btn btn-s btn-secondary animate btn-select"
@@ -253,6 +268,6 @@
                 $('.intro').addClass('d-none');
                 $('.ex_0').removeClass('d-none');
             });
-        })     
+        })
     </script>
 @endsection
