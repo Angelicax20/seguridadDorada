@@ -10,9 +10,10 @@
 
 <body>
     @include('simulador.styles')
-    <div class="page-nav">
+    <div class="page-nav d-flex">
         <div class="logo">
-
+            <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('assets/css/storage/logo.svg') }}"
+                    alt="" width="60rem"></a>
         </div>
         <div class="tienda">
             <h1>Tienda</h1>
