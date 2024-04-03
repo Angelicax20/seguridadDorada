@@ -78,9 +78,9 @@ class SimuladorController extends Controller
             ]);
         }
 
-        if ($simulator != null) {
+        if ($simulator == null) {
             Simulator::where('user_id', Auth::user()->id)->update([
-                'address_id' => $item->id,
+                'address_id' => $item,
             ]);
         }
 
