@@ -24,9 +24,11 @@
         {{-- <div class="d-flex justify-content-end"> --}}
         <ul class="navbar-nav mr-auto">
             @if (Auth::user() != null)
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin') }}">Lista de usuarios</a>
-                </li>
+                @if (Auth::user()->id == 1)
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin') }}">Lista de usuarios</a>
+                    </li>
+                @endif
 
                 <li class="nav-item mx-3 ">
                     <a class="nav-link" href="#">{{ Auth::user()->name }}</a>
