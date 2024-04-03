@@ -59,7 +59,9 @@ class SimuladorController extends Controller
         $simulator = Simulator::where('user_id', Auth::user()->id)->first();
 
 
+
         if ($address == true) {
+            $address_item = Address::where('user_id', Auth::user()->id)->first();
             $item = Address::where('user_id', Auth::user()->id)->update([
                 'department' => $request->deparmento,
                 'city' => $request->ciudad,
@@ -68,7 +70,7 @@ class SimuladorController extends Controller
                 'number_home' => $request->nrcalle,
             ]);
         } else {
-            $item = Address::create([
+            $address_item = Address::create([
                 'department' => $request->deparmento,
                 'city' => $request->ciudad,
                 'street' => $request->calle,
@@ -78,9 +80,9 @@ class SimuladorController extends Controller
             ]);
         }
 
-        if ($simulator == null) {
+        if ($simulator != null && $address == true) {
             Simulator::where('user_id', Auth::user()->id)->update([
-                'address_id' => $item,
+                'address_id' => $address_item->id,
             ]);
         }
 
