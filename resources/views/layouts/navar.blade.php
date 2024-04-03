@@ -25,7 +25,7 @@
         <ul class="navbar-nav mr-auto">
             @if (Auth::user() != null)
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Lista de usuarios</a>
+                    <a class="nav-link" href="{{ route('admin') }}">Lista de usuarios</a>
                 </li>
 
                 <li class="nav-item mx-3 ">
