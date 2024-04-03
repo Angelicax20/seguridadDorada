@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SimuladorController;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,11 @@ Route::prefix('simulador')->group(function () {
     Route::post('/shopCard', [SimuladorController::class, 'shopCard'])->name('shop.card');
     Route::get('/cardView/{price}', [SimuladorController::class, 'cardView'])->name('shop.cardView');
     Route::post('/card', [SimuladorController::class, 'card'])->name('save.card');
+});
+
+Route::prefix('admin')->group(function () {
+    Route::get('/', [AdminController::class, 'index'])->name('admin');
+    Route::get('/userDetail/{id}', [AdminController::class, 'userDetail'])->name('admin.userDetail');
 });
 
 
