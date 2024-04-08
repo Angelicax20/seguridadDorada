@@ -92,6 +92,27 @@
         color: white;
     }
 
+    .button-edit {
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;
+        transition-duration: 0.4s;
+        position: absolute;
+        right: 105px;
+        bottom: 10px;
+        font-size: 16px;
+        text-align: center;
+        border-radius: 8px;
+        padding: 8px 15px;
+
+    }
+
+    .button-edit:hover {
+        background-color: #4CAF50;
+        /* Green */
+        color: white;
+    }
+
     .orienta-regular {
         font-family: "Orienta", sans-serif;
         font-weight: 400;
@@ -373,5 +394,19 @@
     .credit_card {
         height: 100%;
         width: 100%;
+    }
+
+    .alert {
+        position: relative;
+        padding: 1rem 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+    }
+
+    .alert-success {
+        color: #0f5132;
+        background-color: #d1e7dd;
+        border-color: #badbcc;
     }
 </style>

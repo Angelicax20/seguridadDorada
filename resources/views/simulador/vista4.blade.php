@@ -19,20 +19,21 @@
             <a href="{{route('shop.cardView', $price)}}">
                 <div class="mercado_pago" style="display: flex !important;">
                     <div class="icon-container">
-                        <img src="images/product-1.jpg" alt="">
+                       
                     </div>
                     <p>Nueva tarjeta de credito </p>
                 </div>
             </a>
 
             <hr class="divider">
-            <div class="mercado_pago">
-                <input type="radio" />
+            <a href="{{route('shop.cardView', $price)}}">
+            <div class="mercado_pago" style="display: flex !important;">
                 <div class="icon-container">
-                    <img src="images/product-1.jpg" alt="">
+                    
                 </div>
-                <p>Nueva tarjeta de credito </p>
+                <p>Nueva tarjeta de debito </p>
             </div>
+        </a>
 
             <h4>Con otras formas de pago</h4>
             <div class="mercado_pago">

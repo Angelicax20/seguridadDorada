@@ -805,9 +805,9 @@ a#logo {
 
 .form-control {
     height: 50px;
-    color: #fff;
+    color: #000000;
     border: none;
-    background: rgba(250, 250, 250, 0.05);
+    background: rgba(0, 0, 0, 0.05) !important;
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 10px;
     padding: 4px 22px;
@@ -820,7 +820,7 @@ a#logo {
     outline: none;
     background: rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(250, 250, 250, 1);
-    color: #fff;
+    color: #000000;
 }
 
 .index .form-control.form-control-dark {

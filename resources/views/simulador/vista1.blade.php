@@ -25,7 +25,7 @@
                 <div class="option">
                     <div class="entrega_title">
                         <div class="radio_option">
-                            <input type="radio" id="opcion1" name="opcion" value="opcion1">
+                            <input type="radio" id="opcion1" name="opcion" value="opcion1" checked>
                             <label for="opcion1" class="lbl_radio_option">Entrega a domicilio</label>
                         </div>
                         @if ($address != null)
@@ -103,6 +103,31 @@
         </div>
 
     </div>
+
+    <script>
+        const $opcionInputs = $('input[type="radio"][name="opcion"]');
+
+        // Función para validar si se ha seleccionado una opción
+        function isOpcionSelected() {
+            return $opcionInputs.filter(':checked').length > 0;
+        }
+
+        // Mostrar mensaje de error si no se selecciona una opción
+        $opcionInputs.on('change', () => {
+            if (!isOpcionSelected()) {
+                // Mostrar mensaje de error
+                alert('Debes seleccionar una opción.');
+            }
+        });
+
+        // Opcionalmente, mostrar un mensaje de error al cargar la página si no hay una opción seleccionada
+        $(document).ready(() => {
+            if (!isOpcionSelected()) {
+                // Mostrar mensaje de error
+                alert('Debes seleccionar una opción.');
+            }
+        });
+    </script>
 
 </body>
 

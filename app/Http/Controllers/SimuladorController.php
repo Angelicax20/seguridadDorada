@@ -138,6 +138,6 @@ class SimuladorController extends Controller
         }
 
 
-        return view('simulador.index', compact('products'))->with('alert', 'Tarjeta guardada con exito');
+        return redirect('/simulador')->with('success', 'Simulador finalizado con exito');
     }
 }

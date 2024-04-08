@@ -25,9 +25,13 @@
         <ul class="navbar-nav mr-auto">
             @if (Auth::user() != null)
                 @if (Auth::user()->id == 1)
-                    <li class="nav-item">
+                    <li class="nav-item d-flex">
                         <a class="nav-link" href="{{ route('admin') }}">Lista de usuarios</a>
+                        <a class="nav-link" href="{{ route('admin.products') }}">Crear productos</a>
+                        <a class="nav-link" href="{{ route('shop.view') }}">Editar productos</a>
                     </li>
+                   
+                   
                 @endif
 
                 <li class="nav-item mx-3 ">

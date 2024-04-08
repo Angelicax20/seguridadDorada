@@ -36,6 +36,10 @@ Route::prefix('simulador')->group(function () {
 Route::prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin');
     Route::get('/userDetail/{id}', [AdminController::class, 'userDetail'])->name('admin.userDetail');
+    Route::get('/products', [AdminController::class, 'products'])->name('admin.products');
+    Route::post('/products/save', [AdminController::class, 'saveProduct'])->name('admin.saveProduct');
+    Route::get('/products/edit/{id}', [AdminController::class, 'editProduct'])->name('admin.products.edit');
+    Route::post('/products/update/{id}', [AdminController::class, 'updateProduct'])->name('admin.products.update');
 });
 
 
