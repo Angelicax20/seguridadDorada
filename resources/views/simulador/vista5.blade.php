@@ -24,7 +24,7 @@
                     <div class="int_left">
                         <label for="numTarjeta">Numero de tarjeta</label>
                         <br>
-                        <input class="txtTarjeta" type="number" name="numtarjeta" id="numTarjeta">
+                        <input class="txtTarjeta" type="number" name="numtarjeta" id="numTarjeta" required>
                         <label for="nombres">Nombre de tarjeta</label>
                         <br>
                         <input class="txtTarjeta" type="text" name="nombres" id="nombres"
@@ -33,18 +33,18 @@
                             <div>
                                 <label for="dateExpire">Fecha de vencimiento</label>
                                 <br>
-                                <input class="txtTarjeta" type="date" name="dateexpire" id="dateExpire">
+                                <input class="txtTarjeta" type="date" name="dateexpire" id="dateExpire" required>
                             </div>
                             <div>
                                 <label for="codSegurity">Codigo de seguridad</label>
                                 <br>
-                                <input class="txtTarjeta" type="number" name="codsegurity" id="codSegurity">
+                                <input class="txtTarjeta" type="number" name="codsegurity" id="codSegurity" required>
                             </div>
                             <input type="hidden" name="type" value="CREDIT">
                             <div>
                                 <label for="typedoc">Tipo</label>
                                 <br>
-                                <select class="txtTarjeta" name="documenttype" id="">
+                                <select class="txtTarjeta" name="documenttype" id="" required>
                                     <option value="CC">Cedula de ciudadania</option>
                                     <option value="CE">Cedula de extrajero</option>
                                     <option value="TI">Tarjeta de identidad</option>
@@ -53,7 +53,7 @@
                             <div>
                                 <label for="DNI">Cedula de ciudadania</label>
                                 <br>
-                                <input class="txtTarjeta" type="number" name="DNI" id="DNI">
+                                <input class="txtTarjeta" type="number" name="DNI" id="DNI" required>
                             </div>
                         </div>
 
