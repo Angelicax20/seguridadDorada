@@ -90,16 +90,22 @@ class AdminController extends Controller
             return redirect('/simulador')->with('success', 'Producto eliminado con exito');
         }
 
-        // Get original file name with extension
+        if (empty($request->file('imagen'))){
+            $originalImgName = $product->image;
+        }else{
+            // Get original file name with extension
         $originalImgName = $request->file('imagen')->getClientOriginalName();
+                // Get file extension only
+                $extensionimg = pathinfo($originalImgName, PATHINFO_EXTENSION);
 
-        // Get file extension only
-        $extensionimg = pathinfo($originalImgName, PATHINFO_EXTENSION);
+                // Store the file
+                $path_front = $request->file('imagen')->storeAs('public/products', $originalImgName);
+        
+                $path_front = str_replace('public', '/storage', $path_front);
 
-        // Store the file
-        $path_front = $request->file('imagen')->storeAs('public/products', $originalImgName);
+        }
 
-        $path_front = str_replace('public', '/storage', $path_front);
+
 
         $product->update([
             'title' => $request->name,
